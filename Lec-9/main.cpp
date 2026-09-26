@@ -34,7 +34,13 @@ public:
     mSize = other.mSize;
     mCapacity = other.mSize;
   }
-
+  // other 
+  // 0 
+  // [mData]      nullptr 
+  // Vector A = std::move(other);
+  // A 
+  // 5  
+  // [mData]->       -> 0x100[ 1 2 3 4 5 ]
   vector(vector<int>&& other){
     std::cout <<"SHALLOW COPY CONSUTRUCTION VERY CHEAP\n";
     mData = other.mData;
